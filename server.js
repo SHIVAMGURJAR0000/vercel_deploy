@@ -1,4 +1,5 @@
 const express = require("express");
+import serverless from "serverless-http";
 const app = express();
 
 const port = process.env.PORT || 8080;
@@ -26,6 +27,5 @@ app.post("/api/getS", (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log("server is running ");
-});
+// app.listen(port, () => {
+//   console.log("server is running ");
