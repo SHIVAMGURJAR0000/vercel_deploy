@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 import serverless from "serverless-http";
 const app = express();
 
@@ -6,10 +6,6 @@ const port = process.env.PORT || 8080;
 app.use(express.json()); // ✅ Required to parse JSON body
 
 app.get("/", (req, res) => {
-  res.send("hello workd");
-});
-
-app.post("/api/getS", (req, res) => {
   const { data } = req.body;
 
   // Validate input
