@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 app.use(express.json()); // ✅ Required to parse JSON body
 
-app.get("/", (req, res) => {
+app.post("/", (req, res) => {
   const { data } = req.body;
 
   // Validate input
